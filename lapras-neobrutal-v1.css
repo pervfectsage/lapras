@@ -1,0 +1,49 @@
+/* Pastel neobrutalism: solid outlines, offset shadows, compact controls. */
+:root{--cream:#f7f2e8;--ink:#25212e;--panel:#fffdf8;--field:#fffaf0;--muted:#655e72;--soft:#eee5ff;--green:#7253b5;--accent-ink:#fff;--line:#d5ccdd;--neo-edge:#25212e;--neo-lavender:#c5b7ff;--neo-cyan:#a2e7e8;--neo-yellow:#ffe39a;--neo-shadow:4px 4px 0 var(--neo-edge)}
+:root[data-theme="dark"]{--cream:#201c29;--ink:#f3edf9;--panel:#302a3d;--field:#252130;--muted:#c3b7d0;--soft:#41344f;--green:#c5b7ff;--accent-ink:#25212e;--line:#685975;--neo-edge:#100d17;--shadow:4px 4px 0 #100d17}
+body{font-family:'Trebuchet MS',system-ui,sans-serif}
+body header{border-bottom:2px solid var(--neo-edge);background:var(--panel)}
+body .brand{font-weight:800;letter-spacing:-.3px}
+body .brand-description{letter-spacing:0;border-color:var(--line)}
+body .brand-sprite{background:var(--neo-lavender);border:2px solid var(--neo-edge);border-radius:11px 11px 4px 11px;box-shadow:3px 3px 0 var(--neo-edge)}
+body main{padding:12px 16px 16px 12px}
+body .machine,body .code-panel{border:2px solid var(--neo-edge);border-radius:13px 13px 5px 13px;box-shadow:var(--neo-shadow);background:var(--panel)}
+body .machine>.toolbar{background:var(--panel);border-bottom:2px solid var(--neo-edge);padding:11px 12px 14px;gap:10px}
+body .machine .toolbar button,body .theme-toggle,body .transfer-actions button,body .file-tools button{border:2px solid var(--neo-edge);border-radius:9px 9px 3px 9px;background:var(--neo-lavender);color:#25212e;box-shadow:3px 3px 0 var(--neo-edge);font-weight:800;transition:transform 120ms ease,box-shadow 120ms ease,background 120ms ease}
+body .machine .toolbar button{padding:9px 12px}
+body .machine .toolbar button kbd{color:#504461;font-weight:500}
+body .machine .toolbar button[data-keys="17,120"]:not(:disabled){background:#b29af4;color:#21172f;border-color:var(--neo-edge);box-shadow:3px 3px 0 var(--neo-edge)}
+body .machine .toolbar button[data-keys="17,120"]:not(:disabled) kbd{color:#443259}
+body .machine .toolbar button#full{background:var(--neo-cyan)}
+body .machine .toolbar button:not(:disabled):hover,body .machine .toolbar button[data-keys="17,120"]:not(:disabled):hover,body .theme-toggle:hover,body .transfer-actions button:not(:disabled):hover,body .file-tools button:hover{background:#dacfff;border-color:var(--neo-edge);box-shadow:4px 5px 0 var(--neo-edge);transform:translate(-1px,-2px);filter:none}
+body .machine .toolbar button:not(:disabled):active,body .theme-toggle:active,body .transfer-actions button:not(:disabled):active,body .file-tools button:active{transform:translate(3px,3px);box-shadow:none}
+body .machine .toolbar button:disabled,body .transfer-actions button:disabled{background:var(--soft);color:var(--muted);border-color:var(--line);box-shadow:none;opacity:1;transform:none}
+body .machine .toolbar button:disabled kbd{color:var(--muted)}
+body button:focus-visible,body .machine .toolbar button:focus-visible,body input:focus-visible,body select:focus-visible{outline:3px solid var(--green);outline-offset:4px}
+body .theme-toggle{padding:8px 12px;background:var(--neo-yellow);font-size:11px}
+body .code-panel .panel-head{background:var(--neo-lavender);color:#25212e;border-bottom:2px solid var(--neo-edge);font-weight:800}
+body .panel-badge{background:#fffdf8;color:#4c3c65;border:2px solid var(--neo-edge);border-radius:6px 6px 2px 6px;padding:2px 5px;font-weight:700}
+body .code-panel .aside-inner{gap:12px;padding:12px}
+body .file-tools{gap:5px}
+body .file-tools button{background:var(--neo-yellow);box-shadow:2px 2px 0 var(--neo-edge);width:30px;height:32px;padding:6px;flex:none}
+body .file-tools #copy{background:var(--neo-cyan)}
+body .file-name{border:2px solid var(--neo-edge);background:var(--field);border-radius:7px 7px 3px 7px}
+body .file-name input{font-weight:700}
+body .editor-shell{border:2px solid var(--neo-edge);border-radius:8px 8px 3px 8px;background:var(--field)}
+body .editor-shell:focus-within{border-color:var(--green);box-shadow:2px 2px 0 var(--neo-edge)}
+body .editor-status{background:var(--panel);border-top:1px solid var(--line)}
+body .transfer-actions{gap:10px;padding-right:3px;padding-bottom:3px}
+body .transfer-actions button{padding:9px 5px;font-size:11px}
+body .transfer-actions #retrieve:not(:disabled){background:var(--neo-cyan)}
+body .starter-row select{border:2px solid var(--neo-edge);border-radius:7px 7px 3px 7px;background:var(--field);padding:7px;color:var(--ink)}
+body .editor-help{border-top:1px solid var(--line);font-size:11px}
+body .machine>#screen,body #screen:fullscreen{background:#17151d}
+body #launch{background:#24202d}
+body #launch #start{background:var(--neo-lavender);border:2px solid #100d17;color:#25212e;box-shadow:5px 5px 0 #100d17;border-radius:11px 11px 4px 11px;padding:13px 22px}
+body #launch #start:hover{background:#dbceff;filter:none;transform:translate(-1px,-2px);box-shadow:6px 7px 0 #100d17}
+body #launch #start:active{transform:translate(5px,5px);box-shadow:none}
+body #panel-divider span{height:44px;width:5px;border:1px solid var(--neo-edge);border-radius:3px;background:var(--neo-lavender);box-shadow:1px 1px 0 var(--neo-edge)}
+body #panel-divider:hover span,body #panel-divider:focus-visible span,body.is-resizing #panel-divider span{background:var(--neo-cyan);box-shadow:2px 2px 0 var(--neo-edge)}
+body footer{border-top:1px solid var(--line);background:var(--cream)}
+@media(max-width:550px){body main{padding:10px 12px 14px 10px}body .machine>.toolbar{gap:8px;padding:10px 9px 13px}body .machine .toolbar button{padding:8px 9px}body .machine .toolbar kbd{display:none}body .theme-toggle{gap:5px;padding:8px}.brand-description{font-size:10px}}
+@media(prefers-reduced-motion:reduce){body .machine .toolbar button,body .theme-toggle,body .transfer-actions button,body .file-tools button{transition:none}}
